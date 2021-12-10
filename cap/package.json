@@ -25,7 +25,7 @@
     "build": "cds build",
     "build2": "cp ./gen/db/.env ./ && cds build && cp ./.env ./gen/db/",
     "openapi": "cds compile srv --service all -o docs --to openapi --openapi:diagram",
-    "load": "node convertData"
+    "load": "cds build && npm run sql && node convertData"
   },
   "cds": {
     "i18n": {
